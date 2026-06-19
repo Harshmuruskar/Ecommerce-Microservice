@@ -35,7 +35,6 @@ public class ProductController {
         return ResponseEntity.ok(productservice.getAllProducts());
     }
 
-
     @DeleteMapping("/delete")
     public ResponseEntity<String> deleteProduct(@RequestParam(value = "id") Long id){
         productservice.deleteProduct(id);
@@ -46,4 +45,5 @@ public class ProductController {
     public ResponseEntity<List<ProductResponse>> searchProducts(@RequestParam String keyword){
         return ResponseEntity.ok(productservice.searchProducts(keyword));
     }
+
 }
